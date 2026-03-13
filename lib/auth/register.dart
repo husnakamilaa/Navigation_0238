@@ -23,6 +23,12 @@ class _RegisterPageState extends State<RegisterPage> {
   
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MainLayout(
+      title: 'Register',
+      showAppBar: false,
+      child: Container(
+        
+      )
+    );
   }
 }
