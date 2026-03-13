@@ -36,7 +36,14 @@ class _RegisterPageState extends State<RegisterPage> {
                 horizontal: 32.0,
                 vertical: 24.0,
               ),
-              
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  
+                ),
+              ),
             ),
           ),
         ),
