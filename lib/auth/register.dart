@@ -31,13 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
         color: MainLayout.backgroundColor,
         child: Center(
           child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32.0,
-                vertical: 24.0,
-              ),
-              
-            ),
+            
           ),
         ),
       ),
