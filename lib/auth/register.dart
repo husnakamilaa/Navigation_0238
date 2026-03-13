@@ -91,24 +91,31 @@ class _RegisterPageState extends State<RegisterPage> {
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: 'Fill Name',
-                        labelStyle: const TextStyle(color: MainLayout.labelColor),
-                        prefixIcon: const Icon(Icons.person_outline,
-                        color: MainLayout.primaryColor),
+                        labelStyle: const TextStyle(
+                          color: MainLayout.labelColor,
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: MainLayout.primaryColor,
+                        ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor),
+                            color: MainLayout.inputBorderColor,
+                          ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor, width: 2),
+                            color: MainLayout.inputBorderColor,
+                            width: 2,
+                          ),
                         ),
                         filled: true,
                         fillColor: MainLayout.inputFillColor,
                       ),
                       validator: (value) {
-                        if(value == null || value.isEmpty){
+                        if (value == null || value.isEmpty) {
                           return 'Please enter yout name';
                         }
                         return null;
@@ -121,24 +128,31 @@ class _RegisterPageState extends State<RegisterPage> {
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: 'Email Address',
-                        labelStyle: const TextStyle(color: MainLayout.labelColor),
-                        prefixIcon: const Icon(Icons.person_outline,
-                        color: MainLayout.primaryColor),
+                        labelStyle: const TextStyle(
+                          color: MainLayout.labelColor,
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: MainLayout.primaryColor,
+                        ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor),
+                            color: MainLayout.inputBorderColor,
+                          ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor, width: 2),
+                            color: MainLayout.inputBorderColor,
+                            width: 2,
+                          ),
                         ),
                         filled: true,
                         fillColor: MainLayout.inputFillColor,
                       ),
                       validator: (value) {
-                        if(value == null || value.isEmpty){
+                        if (value == null || value.isEmpty) {
                           return 'Please enter yout email';
                         }
                         return null;
@@ -151,31 +165,71 @@ class _RegisterPageState extends State<RegisterPage> {
                       textInputAction: TextInputAction.done,
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        labelStyle: const TextStyle(color: MainLayout.labelColor),
-                        prefixIcon: const Icon(Icons.person_outline,
-                        color: MainLayout.primaryColor),
+                        labelStyle: const TextStyle(
+                          color: MainLayout.labelColor,
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: MainLayout.primaryColor,
+                        ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor),
+                            color: MainLayout.inputBorderColor,
+                          ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
                           borderSide: const BorderSide(
-                            color: MainLayout.inputBorderColor, width: 2),
+                            color: MainLayout.inputBorderColor,
+                            width: 2,
+                          ),
                         ),
                         filled: true,
                         fillColor: MainLayout.inputFillColor,
                       ),
                       validator: (value) {
-                        if(value == null || value.isEmpty){
+                        if (value == null || value.isEmpty) {
                           return 'Please enter yout password';
                         }
                         return null;
                       },
                     ),
                     const SizedBox(height: 32),
-
+                    ElevatedButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          ScaffoldMessenger.of(
+                            context,
+                          ).showSnackBar(const SnackBar(
+                            content: Text('Registration Successful! Please login.'),
+                            backgroundColor: Colors.green,
+                            duration: Duration(seconds:2),
+                          ),
+                          );
+                          Navigator.pop(context);
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 18),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        backgroundColor: MainLayout.primaryColor,
+                        foregroundColor: Colors.white,
+                        elevation: 0,
+                      ),
+                      child: const Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.0,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    
                   ],
                 ),
               ),
