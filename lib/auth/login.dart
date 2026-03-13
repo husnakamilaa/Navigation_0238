@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:navigasi/auth/register.dart';
 import 'package:navigasi/main.dart';
 import 'package:navigasi/main_layout.dart';
+import 'package:navigasi/mainui/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -86,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 48),
                     TextFormField(
                       controller: emailController,
-                      keyboardAppearance: TextInputType.emailAddress,
+                      keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: 'Email Address',
