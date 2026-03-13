@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigasi/main_layout.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -14,21 +15,32 @@ class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
 
   @override
-  void dispose(){
+  void dispose() {
     nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return MainLayout(
       title: 'Register',
       showAppBar: false,
       child: Container(
-        
-      )
+        color: MainLayout.backgroundColor,
+        child: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 32.0,
+                vertical: 24.0,
+              ),
+              
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
