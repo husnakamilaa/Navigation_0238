@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigasi/auth/login.dart';
 import 'package:navigasi/main_layout.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -86,7 +87,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(height: 48),
                     TextFormField(
                       controller: nameController,
-                      keyboardAppearance: TextInputType.name,
+                      keyboardType: TextInputType.name,
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: 'Fill Name',
@@ -123,7 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(height: 16),
                     TextFormField(
                       controller: emailController,
-                      keyboardAppearance: TextInputType.emailAddress,
+                      keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         labelText: 'Email Address',
