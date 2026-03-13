@@ -80,7 +80,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.w800,
                         color: MainLayout.textSubtitleColor,
                       ),
                     ),
