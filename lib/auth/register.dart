@@ -64,6 +64,17 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                     ),
                     const SizedBox(height: 32),
+                    const Text(
+                      'Create Account',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w800,
+                        color: MainLayout.textTitleColor,
+                        letterSpacing: -0.5,
+                      ),
+                    ),
+                    
                   ],
                 ),
               ),
