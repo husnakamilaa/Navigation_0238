@@ -44,7 +44,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Image.asset(
-                      'assets/images/cat.png',
+                      'assets/images/cat.jpg',
                       height: 100,
                       fit: BoxFit.contain,
                       errorBuilder: (context, error, StackTrace) {
