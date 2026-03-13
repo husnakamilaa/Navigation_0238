@@ -12,5 +12,17 @@ class MainLayout extends StatelessWidget {
   static const Color inputBorderColor = Color(0xFFE0E0E0);
   static const Color labelColor = Color(0xFF4A4A4A);
 
+  final Widget child;
+  final String title;
+  final bool showAppBar;
+  final List<Widget>? actions;
+
+  const MainLayout({
+    super.key,
+    required this.child,
+    this.title = '',
+    this.showAppBar = true,
+    this.actions});
+
   
 }
