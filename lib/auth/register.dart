@@ -199,13 +199,14 @@ class _RegisterPageState extends State<RegisterPage> {
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          ScaffoldMessenger.of(
-                            context,
-                          ).showSnackBar(const SnackBar(
-                            content: Text('Registration Successful! Please login.'),
-                            backgroundColor: Colors.green,
-                            duration: Duration(seconds:2),
-                          ),
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                'Registration Successful! Please login.',
+                              ),
+                              backgroundColor: Colors.green,
+                              duration: Duration(seconds: 2),
+                            ),
                           );
                           Navigator.pop(context);
                         }
@@ -229,7 +230,36 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Already have an account? ',
+                          style: TextStyle(
+                            color: MainLayout.textSubtitleColor,
+                            fontSize: 15,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginPage(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(
+                              color: MainLayout.accenteYellow,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
