@@ -41,7 +41,30 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  
+                  children: [
+                    Image.asset(
+                      'assets/images/cat.png',
+                      height: 100,
+                      fit: BoxFit.contain,
+                      errorBuilder: (context, error, StackTrace) {
+                        return Container(
+                          height: 180,
+                          decoration: BoxDecoration(
+                            color: MainLayout.primaryColor.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.image_not_supported_outlined,
+                              size: 80,
+                              color: MainLayout.primaryColor,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    
+                  ],
                 ),
               ),
             ),
